@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import dummyText from "./dummyText";
 import Home from "./components/Home";
+import WideCard from "./components/WideCard";
 import "./App.css";
 
 class App extends React.Component {
