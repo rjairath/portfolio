@@ -16,7 +16,7 @@ const Home = ({ id }) => {
               to="section2"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={700}
             >
               KNOW MORE
