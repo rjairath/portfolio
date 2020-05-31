@@ -7,54 +7,67 @@ export default class Navbar extends Component {
     scroll.scrollToTop();
   };
 
+  closeDrawer = () => {
+    document.getElementById("menu").click();
+  };
+
   render() {
     return (
-      <nav className="nav" id="navbar">
-        <div className="nav-content">
-          <img
-            src={logo}
-            className="nav-logo"
-            alt="Logo."
-            onClick={this.scrollToTop}
-          />
-          <ul className="nav-items">
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section1"
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section2"
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-              >
-                Portfolio
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section3"
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-              >
-                Skills
-              </Link>
-            </li>
-            {/* <li className="nav-item">
+      <React.Fragment>
+        <input type="checkbox" id="menu" />
+        <label for="menu"></label>
+        <nav className="nav" id="navbar">
+          <span className="closeBtn" onClick={() => this.closeDrawer()}>
+            &times;
+          </span>
+          <div className="nav-content">
+            <img
+              src={logo}
+              className="nav-logo"
+              alt="Logo."
+              onClick={this.scrollToTop}
+            />
+            <ul className="nav-items">
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="section1"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                  onClick={() => this.closeDrawer()}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="section2"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                  onClick={() => this.closeDrawer()}
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="section3"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                  onClick={() => this.closeDrawer()}
+                >
+                  Skills
+                </Link>
+              </li>
+              {/* <li className="nav-item">
               <Link
                 activeClass="active"
                 to="section4"
@@ -66,9 +79,10 @@ export default class Navbar extends Component {
                 Contact
               </Link>
             </li> */}
-          </ul>
-        </div>
-      </nav>
+            </ul>
+          </div>
+        </nav>
+      </React.Fragment>
     );
   }
 }
