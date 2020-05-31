@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import Home from "./components/Home";
 import SkillSection from "./components/SkillSection";
-import "./App.css";
+import "./App.scss";
 
 class App extends React.Component {
   render() {
