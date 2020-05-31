@@ -15,7 +15,7 @@ export default class Navbar extends Component {
     return (
       <React.Fragment>
         <input type="checkbox" id="menu" />
-        <label for="menu"></label>
+        <label for="menu" id="menuLabel"></label>
         <nav className="nav" id="navbar">
           <span className="closeBtn" onClick={() => this.closeDrawer()}>
             &times;

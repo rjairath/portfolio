@@ -12,8 +12,8 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Home id="section1" />
-        {/* <Section title="Section 2" dark={false} id="section2" />
-        <SkillSection id="section3" />  */}
+        <Section id="section2" />
+        {/* <SkillSection id="section3" />  */}
       </div>
     );
   }
