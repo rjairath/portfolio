@@ -1,7 +1,7 @@
 const tapchief = [
   "Developed ATS Admin, an internal product that helped the fulfillment team to match clients with experts in a more efficient way.",
   "Made the new Tapchief home with an easier access to ATS and Workspace.",
-  "Also added Tapchief marketplace with enhanced filters for easier discovery of projects and experts",
+  "Also added Tapchief marketplace with enhanced filters",
   "Developed a unified chat for tapchief home using Pusher",
 ];
 const digit = [
@@ -10,7 +10,8 @@ const digit = [
   "Travel Delay Claim App: Used by a policy holder in case of flight delay to ask for a claim",
 ];
 const uni = [
-  "Made the uni.xyz feed mobile responsive. AngularJS was used on the frontend",
+  "Made the uni.xyz feed mobile responsive",
+  "AngularJS was used on the frontend along with Bootstrap and jQuery",
 ];
 
 export { tapchief, digit, uni };
