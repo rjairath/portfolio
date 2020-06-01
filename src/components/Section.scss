@@ -1,0 +1,331 @@
+$background-color-new: #eee;
+
+.section {
+  height: var(--section-height);
+  background: $background-color-new;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scene {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 65%;
+  height: 50%;
+  position: relative;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  //   overflow: hidden;
+}
+
+#left-zone {
+  background: #fff;
+  height: 75%;
+  flex-grow: 0;
+  display: flex;
+  width: 35%;
+  align-items: center;
+  justify-content: left;
+
+  .list {
+    display: flex;
+    list-style: none;
+    align-content: stretch;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+#left-zone .item input[type="radio"] {
+  display: none;
+}
+
+#left-zone .item input[type="radio"]:checked ~ .label_strawberry {
+  color: #d64541;
+  border-right: solid 4px #d64541;
+}
+
+#left-zone .item input[type="radio"]:checked ~ .content {
+  display: flex;
+  animation-name: slidein;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.label-img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.label_base {
+  display: block;
+  opacity: 0.5;
+  font-size: 1.2rem;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+}
+
+.content {
+  position: absolute;
+  left: 35%;
+  top: -400px;
+  width: 50%;
+  height: 90%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5%;
+
+  animation-name: slideout;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-out;
+}
+
+.content_strawberry h1 {
+  color: #d64541;
+}
+
+#middle-border {
+  background-color: #eee;
+  height: 75%;
+  flex-grow: 1;
+  max-width: 2px;
+  z-index: 0;
+}
+
+#right-zone {
+  background: #fff;
+  height: 100%;
+  flex-grow: 3;
+}
+
+.widecard-row {
+  border-bottom: 2px solid #eee;
+  align-self: flex-start;
+  width: 100%;
+  line-height: 1rem;
+}
+
+.widecard-content {
+  padding: 10px 0;
+  font-weight: 300;
+  font-size: 1.1em;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+}
+
+.widecard-footer {
+  padding: 10px;
+  background-color: #eee;
+  border: none;
+  width: 100%;
+  position: absolute;
+  bottom: -2%;
+}
+
+// Animations
+@keyframes slidein {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes slideout {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -400px;
+    opacity: 0;
+  }
+}
+@keyframes slideinMobile {
+  from {
+    left: -400px;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideoutMobile {
+  from {
+    left: 0%;
+    opacity: 1;
+  }
+  to {
+    left: -400px;
+    opacity: 0;
+  }
+}
+// Media queries
+@media screen and (max-width: 480px) {
+  #scene {
+    width: 80%;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2%;
+  }
+
+  #left-zone {
+    height: 15%;
+    flex-grow: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+
+    .list {
+      display: flex;
+      list-style: none;
+      align-content: stretch;
+      flex-direction: row;
+      flex-grow: 1;
+      margin: 0;
+      height: 100%;
+      padding: 10px 10px 0 10px;
+      position: relative;
+
+      li {
+        margin-top: 0;
+      }
+    }
+  }
+
+  #left-zone .item input[type="radio"]:checked ~ .label_strawberry {
+    color: #d64541;
+    border-right: unset;
+    border-bottom: solid 4px #d64541;
+  }
+
+  #left-zone .item input[type="radio"]:checked ~ .content {
+    display: flex;
+    animation-name: slideinMobile;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+  .label_base {
+    height: 40px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .label-img {
+    height: 3em;
+    width: 3em;
+  }
+
+  .label_digit {
+    left: 30%;
+    max-width: 30%;
+    overflow-y: hidden;
+  }
+
+  .label_img_digit {
+    left: 34%;
+  }
+
+  .label_uni {
+    left: 66%;
+  }
+
+  .label_img_uni {
+    left: 66%;
+  }
+
+  .content {
+    position: relative;
+    text-align: left;
+    left: -400px;
+    top: 55px;
+    width: 90%;
+    height: 30em;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 2%;
+
+    animation-name: slideoutMobile;
+    /* animation-duration: 0.75s;
+    animation-timing-function: ease-out; */
+  }
+
+  .widecard-row {
+    border-bottom: unset;
+
+    h1 {
+      display: none;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #d64541;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  .widecard-footer {
+    position: relative;
+  }
+
+  #middle-border {
+    background-color: #eee;
+    height: 2px;
+    flex-grow: 1;
+    max-width: unset;
+    width: 100%;
+    z-index: 0;
+  }
+
+  #right-zone {
+    background: #fff;
+    height: 85%;
+    width: 100%;
+    flex-grow: 3;
+  }
+}
