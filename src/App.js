@@ -13,7 +13,7 @@ class App extends React.Component {
         <Navbar />
         <Home id="section1" />
         <Section id="section2" />
-        {/* <SkillSection id="section3" />  */}
+        <SkillSection id="section3" />
       </div>
     );
   }

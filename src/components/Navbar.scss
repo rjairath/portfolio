@@ -56,7 +56,7 @@ input[type="checkbox"] {
   text-align: center;
   color: #000;
   display: none;
-  z-index: 10000;
+  z-index: 10;
   background: #d64541;
 }
 
@@ -94,6 +94,7 @@ input[type="checkbox"] {
   }
 
   input[type="checkbox"]:checked ~ .nav {
+    position: fixed;
     left: 0;
   }
   input[type="checkbox"]:checked #menuLabel {
@@ -143,6 +144,7 @@ input[type="checkbox"] {
     }
   }
   .closeBtn {
+    color: black;
     position: absolute;
     font-size: 2.5em;
     display: block;
