@@ -4,7 +4,14 @@ import Social from "./Social";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Home.scss";
 
+const url =
+  "https://drive.google.com/file/d/1MuGcQWY5GY6ohpkM-K7uUd7Mg26ulAi8/view?usp=sharing";
+
 const Home = ({ id }) => {
+  const downloadResume = () => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="home" id={id}>
       <div className="homeCard">
@@ -24,7 +31,12 @@ const Home = ({ id }) => {
                 KNOW MORE
               </Link>
             </button>
-            <button className="home__cta-primary bold">DOWNLOAD RESUME</button>
+            <button
+              className="home__cta-primary bold"
+              onClick={() => downloadResume()}
+            >
+              DOWNLOAD RESUME
+            </button>
           </div>
         </div>
 
