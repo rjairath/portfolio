@@ -68,6 +68,11 @@ input[type="checkbox"] {
   display: none;
 }
 
+.active {
+  font-weight: 800;
+  color: #d64541 !important;
+}
+
 @media screen and (max-width: 480px) {
   $menu_width: 60%;
 
