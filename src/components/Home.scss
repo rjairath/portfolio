@@ -150,3 +150,28 @@ $background-color-new: #eee;
     margin: 1em auto;
   }
 }
+
+@media screen and (max-width: 365px) {
+  .homeCard {
+    height: calc(90% - 80px);
+  }
+  .rightHomeCard {
+    padding-top: 5%;
+  }
+  .profilePic {
+    height: auto;
+    width: 40%;
+    max-width: 120px;
+  }
+  .nametag {
+    font-size: 1.5em;
+    margin-top: 4%;
+  }
+  .infotag {
+    font-style: unset;
+    margin-bottom: 0;
+  }
+  .home__cta-primary {
+    margin: 0.5em auto;
+  }
+}

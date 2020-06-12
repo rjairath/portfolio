@@ -16,8 +16,10 @@ const Home = ({ id }) => {
     <div className="home" id={id}>
       <div className="homeCard">
         <div className="leftHomeCard">
-          <p className="nametag">HI! I'M RISHABH</p>
-          <p className="infotag">A web developer who loves to build things</p>
+          <p className="nametag">HI, I'M RISHABH!</p>
+          <p className="infotag">
+            Engineer|Developer. Passionate about all things Javascript & Python
+          </p>
           <div>
             <button className="home__cta-primary bold">
               <Link

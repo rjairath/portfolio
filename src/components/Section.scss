@@ -329,3 +329,34 @@ $background-color-new: #eee;
     flex-grow: 3;
   }
 }
+
+@media screen and (max-width: 365px) {
+  .label-img {
+    width: 12%;
+    max-width: 80px;
+    height: auto;
+  }
+
+  .label_base {
+    font-size: 1em;
+  }
+
+  .content {
+    max-height: var(--custom-height);
+  }
+
+  .widecard-content {
+    font-size: 0.9em;
+    padding: 0;
+  }
+
+  .widecard-row {
+    p {
+      font-size: 1.1em;
+    }
+  }
+
+  .widecard-footer {
+    padding: 0 10px;
+  }
+}
