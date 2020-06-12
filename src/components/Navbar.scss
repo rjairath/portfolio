@@ -68,16 +68,24 @@ input[type="checkbox"] {
   display: none;
 }
 
+.active {
+  font-weight: 800;
+  color: #d64541 !important;
+}
+
 @media screen and (max-width: 480px) {
   $menu_width: 60%;
 
   .nav {
     background-color: var(--off-white);
-    position: absolute;
+    position: fixed;
     width: $menu_width;
     left: -$menu_width;
-
-    height: calc(100vh + 55px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    height: unset;
     z-index: 1000;
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
     transition: 0.5s;
