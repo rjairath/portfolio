@@ -1,0 +1,43 @@
+$background-color-new: #eee;
+
+.section {
+  height: var(--section-height);
+  background: $background-color-new;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sectionCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 65%;
+  position: relative;
+  margin: auto;
+}
+
+.sectionCard {
+  height: 100%;
+  width: 40%;
+  margin: 0 5%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (max-width: 480px) {
+  .sectionCardContainer {
+    width: 80%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .sectionCard {
+    width: 100%;
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+}
