@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import Home from "./components/Home";
