@@ -77,6 +77,7 @@ export default class Navbar extends Component {
                   smooth={true}
                   offset={-80}
                   duration={500}
+                  onClick={() => this.closeDrawer()}
                 >
                   Blog
                 </Link>
@@ -89,6 +90,7 @@ export default class Navbar extends Component {
                   smooth={true}
                   offset={-80}
                   duration={500}
+                  onClick={() => this.closeDrawer()}
                 >
                   Contact
                 </Link>

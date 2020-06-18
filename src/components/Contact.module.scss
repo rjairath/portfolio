@@ -140,3 +140,26 @@ input[type="reset"] {
     position: relative;
   }
 }
+
+@media screen and (max-width: 365px) {
+  form input[type="text"],
+  form input[type="email"],
+  form textarea,
+  input[type="submit"],
+  input[type="reset"] {
+    font-size: 1em;
+  }
+
+  .textAreaRow {
+    margin-bottom: 5%;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 0.5em 3em;
+  }
+
+  .socialAlign {
+    margin-top: 2%;
+  }
+}
