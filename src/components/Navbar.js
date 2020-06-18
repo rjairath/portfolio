@@ -77,8 +77,22 @@ export default class Navbar extends Component {
                   smooth={true}
                   offset={-80}
                   duration={500}
+                  onClick={() => this.closeDrawer()}
                 >
                   Blog
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="section5"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                  onClick={() => this.closeDrawer()}
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

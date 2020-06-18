@@ -160,13 +160,13 @@ input[type="checkbox"] {
       font-size: 2em;
       margin-left: 0;
 
-      &:after {
-        position: absolute;
-        right: 0.25em;
-        content: "\203A";
-        font: bold 1.4em sans-serif;
-        color: inherit;
-      }
+      // &:after {
+      //   position: absolute;
+      //   right: 0.25em;
+      //   content: "\203A";
+      //   font: bold 1.4em sans-serif;
+      //   color: inherit;
+      // }
     }
   }
   .closeBtn {

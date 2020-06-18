@@ -12,29 +12,25 @@
   }
 
   button {
-    background: var(--dark-bg-color);
-    color: var(--color-primary-cta);
-    padding: 0.7rem 1.5rem;
-    border-color: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 0.25rem;
+    background: #3d3d3d;
+    padding: 0.85em 3em 0.85em 3em;
+    border-radius: 0.25em;
+    border: 0;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
     position: absolute;
     bottom: 5%;
     cursor: pointer;
 
     &:hover {
-      color: var(--color-primary-cta-hover);
-      font-weight: 900;
+      background: #4f4f4f;
     }
   }
 
   button a {
-    color: var(--color-primary-cta);
-
-    &:hover {
-      color: var(--color-primary-cta-hover);
-      font-weight: 900;
-    }
+    color: #fff;
   }
 }
 
@@ -56,4 +52,17 @@
 }
 
 @media screen and (max-width: 365px) {
+  .blogContainer {
+    h3 {
+      font-size: 1.1em;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+
+    button {
+      padding: 0.5em 3em;
+    }
+  }
 }
