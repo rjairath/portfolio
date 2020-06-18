@@ -8,12 +8,7 @@ const Contact = ({ id }) => {
       <div className={styles["container"]}>
         <p>Building something awesome? Would love to get in touch</p>
 
-        <form
-          name="contact"
-          method="POST"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-        >
+        <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
           <div>
             <div className={styles["formRow"]}>
               <input type="text" placeholder="Name" name="name" />
