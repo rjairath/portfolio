@@ -41,6 +41,7 @@ $background-color-new: #eee;
   display: flex;
   justify-content: flex-start;
   position: relative;
+  flex-wrap: wrap;
 
   input {
     margin-right: 2%;
@@ -78,6 +79,7 @@ form textarea {
 
 form textarea {
   min-height: 13em;
+  resize: none;
 }
 
 input[type="submit"],
@@ -101,5 +103,40 @@ input[type="reset"] {
 
   &:hover {
     background: #4f4f4f;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 80%;
+    height: 90%;
+
+    p {
+      text-align: start;
+    }
+  }
+
+  .formRow {
+    width: 100%;
+    display: block;
+  }
+
+  .formRowEmail {
+    width: 100%;
+    display: block;
+  }
+
+  form textarea {
+    min-height: 8em;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+
+  .socialAlign {
+    position: relative;
   }
 }
