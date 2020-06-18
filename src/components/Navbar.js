@@ -81,6 +81,18 @@ export default class Navbar extends Component {
                   Blog
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="section5"
+                  spy={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={500}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
