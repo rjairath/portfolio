@@ -8,16 +8,24 @@ const Contact = ({ id }) => {
       <div className={styles["container"]}>
         <p>Building something awesome? Would love to get in touch</p>
 
-        <form>
+        <form
+          name="contact"
+          action="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
           <div>
             <div className={styles["formRow"]}>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" name="name" />
             </div>
             <div className={styles["formRowEmail"]}>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" name="email" />
+            </div>
+            <div className={styles["botField"]}>
+              <input name="bot-field" />
             </div>
             <div className={styles["textAreaRow"]}>
-              <textarea name="message" placeholder="Message" />
+              <textarea name="message" placeholder="Message" name="message" />
             </div>
             <div className={styles["buttonRow"]}>
               <input type="submit" value="Send Message" />
