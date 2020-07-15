@@ -5,7 +5,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import "./Home.scss";
 
 const url =
-  "https://drive.google.com/file/d/1Bx-WdZZ16wc50FSadML2R6wDRavkvU3U/view?usp=sharing";
+  "https://drive.google.com/file/d/1LdNEJN-GQWOpIHWGoa-SnBNXeu3XC41I/view?usp=sharing";
 
 const Home = ({ id }) => {
   const downloadResume = () => {
